@@ -1,5 +1,42 @@
 import { Reveal } from './reveal'
 
 export function CTA() {
-  return <section className="relative overflow-hidden bg-teal"><img src="/elementos/aviao-papel-yellow.png" alt="" aria-hidden="true" className="pointer-events-none absolute right-0 top-1/2 z-0 hidden h-full w-[40%] max-w-lg -translate-y-1/2 select-none object-cover object-left md:block" /><div className="relative z-10 mx-auto max-w-7xl px-5 py-10 md:px-8 md:py-12"><div className="grid items-center gap-6 md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_minmax(0,0.7fr)] md:gap-10"><Reveal><h2 className="font-display text-2xl font-extrabold leading-[1.02] text-yellow sm:text-3xl md:text-4xl text-balance">O futuro do Rio se constrói a muitas mãos.</h2></Reveal><Reveal delay={0.08}><div className="max-w-sm"><p className="text-sm leading-relaxed text-cream sm:text-base">Se você já recebeu o convite para fazer parte desta rede, confirme a sua presença.</p><a href="https://tally.so/r/RGaJAv" target="_blank" rel="noreferrer" className="mt-5 inline-block rounded-md bg-yellow px-6 py-3 text-sm font-semibold text-ink transition-transform duration-300 hover:-translate-y-0.5 hover:bg-yellow/90">Confirme sua presença</a></div></Reveal><div aria-hidden="true" className="hidden md:block" /></div></div></section>
+  return (
+    <section className="relative overflow-hidden bg-teal">
+      <img
+        src="/elementos/aviao-papel-yellow.png"
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute right-0 top-1/2 z-0 hidden h-full w-[40%] max-w-lg -translate-y-1/2 select-none object-cover object-left md:block"
+      />
+      <div className="relative z-10 mx-auto max-w-7xl px-5 py-10 md:px-8 md:py-12">
+        <div className="grid items-center gap-6 md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_minmax(0,0.7fr)] md:gap-10">
+          <Reveal>
+            <h2 className="font-display text-2xl font-extrabold leading-[1.02] text-yellow sm:text-3xl md:text-4xl text-balance">
+              O futuro do Rio se constrói a muitas mãos.
+            </h2>
+          </Reveal>
+          <Reveal delay={0.08}>
+            <div className="max-w-sm">
+              <p className="text-sm leading-relaxed text-cream sm:text-base">
+                Participe da rede que conecta pessoas, territórios e ideias para ampliar as possibilidades da cidade.
+              </p>
+              <p className="mt-3 text-sm leading-relaxed text-cream/80 sm:text-base">
+                Se você já recebeu o convite para fazer parte desta rede, confirme a sua presença.
+              </p>
+              <a
+                href="https://tally.so/r/RGaJAv"
+                target="_blank"
+                rel="noreferrer"
+                className="mt-5 inline-block rounded-md bg-yellow px-6 py-3 text-sm font-semibold text-ink transition-transform duration-300 hover:-translate-y-0.5 hover:bg-yellow/90"
+              >
+                Confirme sua presença
+              </a>
+            </div>
+          </Reveal>
+          <div aria-hidden="true" className="hidden md:block" />
+        </div>
+      </div>
+    </section>
+  )
 }

@@ -1,5 +1,3 @@
-import { Home, Building2 } from 'lucide-react'
-
 export function SiteFooter() {
   return (
     <footer id="footer" className="bg-ink">
@@ -7,20 +5,15 @@ export function SiteFooter() {
         <div className="flex flex-col items-start justify-between gap-12 md:flex-row md:items-center">
           {/* partners */}
           <div className="flex flex-wrap items-center gap-x-10 gap-y-6">
-            <span className="text-sm text-cream/50">Uma iniciativa</span>
-
-            <div className="flex items-center gap-2.5 text-cream">
-              <Home className="h-6 w-6" strokeWidth={1.5} />
-              <span className="font-display text-xl font-extrabold tracking-tight">VIVA RIO</span>
+            <div className="flex items-center gap-4">
+              <span className="text-sm font-semibold text-yellow">Uma iniciativa</span>
+              <img src="/logos/partner-vivario.png" alt="Viva Rio" className="h-6 w-auto md:h-7" />
             </div>
 
-            <div className="flex items-center gap-2.5 text-cream/90">
-              <Building2 className="h-6 w-6" strokeWidth={1.5} />
-              <span className="font-display text-sm font-semibold uppercase leading-tight tracking-wide">
-                Casa
-                <br />
-                Fluminense
-              </span>
+            <div className="flex items-center gap-4">
+              <span className="text-sm font-semibold text-yellow">Apoio</span>
+              <img src="/logos/partner-iser.png" alt="ISER" className="h-8 w-auto md:h-9" />
+              <img src="/logos/partner-casa-fluminense.png" alt="Casa Fluminense" className="h-8 w-auto md:h-9" />
             </div>
           </div>
 

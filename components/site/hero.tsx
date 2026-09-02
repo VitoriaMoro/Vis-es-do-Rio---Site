@@ -1,13 +1,43 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { useEffect, useState } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
 import { ChevronDown } from 'lucide-react'
 
+const SLIDES = [
+  { src: '/images/hero-basquete.png', alt: 'Jovem jogando basquete em uma quadra na comunidade, com o Rio de Janeiro ao fundo' },
+  { src: '/images/hero-danca.png', alt: 'Grupo de amigos dançando e comemorando em uma rua de comunidade' },
+  { src: '/images/hero-comunidade.png', alt: 'Três crianças de costas observando a vista de uma comunidade no Rio de Janeiro' },
+  { src: '/images/hero-abordagem.png', alt: 'Policial cumprimentando uma criança com um aperto de mão' },
+]
+
+const SLIDE_DURATION = 6000
+
 export function Hero() {
+  const [active, setActive] = useState(0)
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActive((current) => (current + 1) % SLIDES.length)
+    }, SLIDE_DURATION)
+    return () => clearInterval(timer)
+  }, [])
+
   return (
     <section id="top" className="relative min-h-[clamp(640px,82vh,860px)] w-full overflow-hidden bg-ink">
       <div className="absolute inset-0">
-        <img src="/images/hero-basquete.png" alt="Jovem jogando basquete em uma quadra na comunidade, com o Rio de Janeiro ao fundo" className="h-full w-full object-cover object-center" />
+        <AnimatePresence initial={false}>
+          <motion.img
+            key={SLIDES[active].src}
+            src={SLIDES[active].src}
+            alt={SLIDES[active].alt}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.2, ease: 'easeInOut' }}
+            className="absolute inset-0 h-full w-full object-cover object-center"
+          />
+        </AnimatePresence>
         <div className="absolute inset-0 bg-ink/55" />
         <div className="absolute inset-0 bg-gradient-to-r from-ink/90 via-ink/45 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-transparent to-ink/40" />
@@ -38,7 +68,21 @@ export function Hero() {
         </motion.div>
       </div>
 
-      <motion.a href="#manifesto" aria-label="Rolar para baixo" className="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 text-cream/70" animate={{ y: [0, 8, 0] }} transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}>
+      <div className="absolute bottom-6 left-1/2 z-10 flex -translate-x-1/2 items-center gap-2" role="tablist" aria-label="Selecionar imagem de destaque">
+        {SLIDES.map((slide, index) => (
+          <button
+            key={slide.src}
+            type="button"
+            role="tab"
+            aria-selected={index === active}
+            aria-label={`Mostrar imagem ${index + 1} de ${SLIDES.length}`}
+            onClick={() => setActive(index)}
+            className={`h-2 rounded-full transition-all duration-300 ${index === active ? 'w-6 bg-yellow' : 'w-2 bg-cream/50 hover:bg-cream/80'}`}
+          />
+        ))}
+      </div>
+
+      <motion.a href="#manifesto" aria-label="Rolar para baixo" className="absolute bottom-6 right-6 z-10 hidden text-cream/70 sm:block" animate={{ y: [0, 8, 0] }} transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}>
         <ChevronDown className="h-6 w-6" strokeWidth={1.5} />
       </motion.a>
     </section>

@@ -35,7 +35,7 @@ export function Stories() {
 
   return (
     <section id="historias" className="relative overflow-hidden bg-teal">
-      <div className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28 xl:px-12 2xl:px-20">
+      <div className="mx-auto max-w-7xl xl:max-w-[1180px] 2xl:max-w-[1040px] px-5 py-20 md:px-8 md:py-28">
         <Reveal>
           <div className="mb-10 flex items-center gap-4">
             <h2 className="font-display text-2xl font-extrabold uppercase tracking-wide text-yellow">Histórias</h2>

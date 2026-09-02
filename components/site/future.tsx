@@ -13,7 +13,7 @@ const THEMES = [
 export function Future() {
   return (
     <section id="futuro" className="bg-cream">
-      <div className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28">
+      <div className="mx-auto max-w-7xl xl:max-w-[1180px] 2xl:max-w-[1040px] px-5 py-20 md:px-8 md:py-28">
         <div className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
             <Reveal>
@@ -36,7 +36,7 @@ export function Future() {
             </Reveal>
           </div>
           <Reveal delay={0.1}>
-            <ul className="grid grid-cols-3 gap-x-4 gap-y-8 sm:grid-cols-6 lg:pr-6 xl:pr-16 2xl:pr-28">
+            <ul className="grid grid-cols-3 gap-x-4 gap-y-8 sm:grid-cols-6 lg:pr-4 xl:pr-8 2xl:pr-10">
               {THEMES.map((t) => (
                 <li key={t.label}>
                   <a

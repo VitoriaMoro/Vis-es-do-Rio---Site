@@ -20,8 +20,8 @@ export function Future() {
               <p className="mb-5 text-sm font-bold uppercase tracking-[0.12em] text-orange">Visões para o futuro</p>
             </Reveal>
             <Reveal delay={0.05}>
-              <h2 className="font-display text-3xl font-extrabold leading-[1.1] text-olive sm:text-4xl md:text-5xl">
-                Múltiplas perspectivas,<br />objetivos comuns: um<br />Rio de encontros
+              <h2 className="font-display text-3xl font-extrabold leading-[1.15] text-olive text-balance">
+                Múltiplas perspectivas, objetivos comuns: um Rio de encontros
               </h2>
             </Reveal>
             <Reveal delay={0.1}>

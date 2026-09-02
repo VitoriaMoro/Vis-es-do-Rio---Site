@@ -20,7 +20,7 @@ export function NetworkMap() {
     <section id="mapa" style={{ backgroundColor: '#f4e7d2' }}>
       <div className="mx-auto grid max-w-7xl lg:max-w-[1180px] xl:max-w-[1080px] 2xl:max-w-[900px] items-center gap-10 px-5 py-20 md:px-8 md:py-28 lg:grid-cols-[0.82fr_1.18fr]">
         <div>
-          <Reveal><h2 className="font-display text-4xl font-extrabold leading-[1.05] text-teal sm:text-5xl md:text-6xl text-balance">Uma rede<br />em movimento</h2></Reveal>
+          <Reveal><h2 className="font-display text-4xl font-extrabold leading-[1.1] text-teal text-balance sm:text-5xl">Uma rede em movimento</h2></Reveal>
           <Reveal delay={0.06}><p className="mt-6 max-w-sm text-base leading-relaxed text-ink/75 md:text-lg">Conectamos territórios, iniciativas e pessoas em todo o estado do Rio de Janeiro para multiplicar impactos e criar novas possibilidades.</p></Reveal>
           <Reveal delay={0.1}><a href="#mapa" className="mt-6 inline-flex max-w-sm items-center gap-2 text-base font-semibold leading-relaxed text-teal transition-colors hover:text-orange">Conheça outras iniciativas no Estado que sonham um Rio diferente <ArrowRight className="h-4 w-4 shrink-0" /></a></Reveal>
         </div>

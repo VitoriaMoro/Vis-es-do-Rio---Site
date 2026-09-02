@@ -36,7 +36,7 @@ export function Future() {
             </Reveal>
           </div>
           <Reveal delay={0.1}>
-            <ul className="grid grid-cols-3 gap-x-4 gap-y-8 sm:grid-cols-6">
+            <ul className="grid grid-cols-3 gap-x-4 gap-y-8 sm:grid-cols-6 lg:pr-6 xl:pr-16 2xl:pr-28">
               {THEMES.map((t) => (
                 <li key={t.label}>
                   <a

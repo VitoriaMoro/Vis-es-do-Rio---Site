@@ -9,7 +9,7 @@ export function CTA() {
         aria-hidden="true"
         className="pointer-events-none absolute right-0 top-1/2 z-0 hidden h-full w-[40%] max-w-lg -translate-y-1/2 select-none object-cover object-left md:block"
       />
-      <div className="relative z-10 mx-auto max-w-7xl px-5 py-10 md:px-8 md:py-12">
+      <div className="relative z-10 mx-auto max-w-7xl px-5 py-10 md:px-8 md:py-12 xl:px-12 2xl:px-20">
         <div className="grid items-center gap-6 md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_minmax(0,0.7fr)] md:gap-10">
           <Reveal>
             <h2 className="font-display text-2xl font-extrabold leading-[1.02] text-yellow sm:text-3xl md:text-4xl text-balance">

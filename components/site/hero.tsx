@@ -16,6 +16,13 @@ const CTA_SECONDARY: Box = { top: 81.4, bottom: 10.8, left: 26.4, right: 61.3 }
 
 const SLIDES = [
   {
+    src: '/images/hero-basquete.png',
+    alt: 'Visões do Rio - jovem jogando basquete em uma quadra na comunidade, com o Rio de Janeiro ao fundo',
+    naturalSize: { w: 1080, h: 398 },
+    ctaPrimary: CTA_PRIMARY,
+    ctaSecondary: CTA_SECONDARY,
+  },
+  {
     src: '/images/hero-danca.png',
     alt: 'Visões do Rio - grupo de amigos dançando e comemorando em uma rua de comunidade',
     naturalSize: { w: 1920, h: 816 },

@@ -5,7 +5,7 @@ const VIDEO_SRC = '/videos/visoes-do-rio.mp4'
 export function VideoBlock() {
   return (
     <section className="bg-yellow">
-      <div className="mx-auto grid max-w-7xl xl:max-w-[1180px] 2xl:max-w-[1040px] items-center gap-12 px-5 py-20 md:grid-cols-2 md:px-8 md:py-28">
+      <div className="mx-auto grid max-w-7xl lg:max-w-[1180px] xl:max-w-[1080px] 2xl:max-w-[900px] items-center gap-12 px-5 py-20 md:grid-cols-2 md:px-8 md:py-28">
         <Reveal>
           <div className="overflow-hidden rounded-sm bg-ink ring-1 ring-ink/10 shadow-xl shadow-ink/15">
             {VIDEO_SRC ? (

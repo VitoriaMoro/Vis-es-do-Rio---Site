@@ -1,7 +1,7 @@
 export function SiteFooter() {
   return (
     <footer id="footer" className="bg-ink">
-      <div className="mx-auto max-w-7xl xl:max-w-[1180px] 2xl:max-w-[1040px] px-5 py-16 md:px-8 md:py-20">
+      <div className="mx-auto max-w-7xl lg:max-w-[1180px] xl:max-w-[1080px] 2xl:max-w-[900px] px-5 py-16 md:px-8 md:py-20">
         <div className="flex flex-col items-start justify-between gap-12 md:flex-row md:items-center">
           {/* partners */}
           <div className="flex flex-wrap items-center gap-x-14 gap-y-6 sm:gap-x-20">

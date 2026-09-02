@@ -10,7 +10,7 @@ const METRICS = [
 export function Metrics() {
   return (
     <section className="bg-orange">
-      <div className="mx-auto max-w-7xl xl:max-w-[1180px] 2xl:max-w-[1040px] px-5 py-10 md:px-8 md:py-14">
+      <div className="mx-auto max-w-7xl lg:max-w-[1180px] xl:max-w-[1080px] 2xl:max-w-[900px] px-5 py-10 md:px-8 md:py-14">
         <div className="flex flex-wrap justify-center gap-x-10 gap-y-8 text-center sm:gap-x-14">
           {METRICS.map((m, i) => (
             <Reveal key={m.label} delay={i * 0.08} className={`flex flex-col items-center ${i > 0 ? 'border-l border-yellow/50 pl-10 sm:pl-14' : ''}`}>

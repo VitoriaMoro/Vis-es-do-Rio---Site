@@ -13,7 +13,7 @@ const THEMES = [
 export function Future() {
   return (
     <section id="futuro" className="bg-cream">
-      <div className="mx-auto max-w-7xl xl:max-w-[1180px] 2xl:max-w-[1040px] px-5 py-20 md:px-8 md:py-28">
+      <div className="mx-auto max-w-7xl lg:max-w-[1180px] xl:max-w-[1080px] 2xl:max-w-[900px] px-5 py-20 md:px-8 md:py-28">
         <div className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
             <Reveal>

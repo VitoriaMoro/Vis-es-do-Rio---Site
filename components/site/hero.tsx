@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState, type CSSProperties } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 
-// Todos os 4 banners sao imagens prontas fornecidas pelo cliente, com
+// Os 3 banners sao imagens prontas fornecidas pelo cliente, com
 // titulo, tagline e botoes ja desenhados na propria imagem. Nao recortar
 // nem sobrepor texto adicional por cima - a imagem e a fonte da verdade.
 // As caixas dos botoes (ctaPrimary/ctaSecondary) foram medidas por
@@ -15,13 +15,6 @@ const CTA_PRIMARY: Box = { top: 81.4, bottom: 10.5, left: 9.9, right: 75.3 }
 const CTA_SECONDARY: Box = { top: 81.4, bottom: 10.8, left: 26.4, right: 61.3 }
 
 const SLIDES = [
-  {
-    src: '/images/hero-basquete.png',
-    alt: 'Visões do Rio - jovem jogando basquete em uma quadra na comunidade, com o Rio de Janeiro ao fundo',
-    naturalSize: { w: 1080, h: 398 },
-    ctaPrimary: CTA_PRIMARY,
-    ctaSecondary: CTA_SECONDARY,
-  },
   {
     src: '/images/hero-danca.png',
     alt: 'Visões do Rio - grupo de amigos dançando e comemorando em uma rua de comunidade',
@@ -105,10 +98,10 @@ export function Hero() {
             key={slide.src}
             src={slide.src}
             alt={slide.alt}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1.2, ease: 'easeInOut' }}
+            initial={{ opacity: 0, x: 48 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -48 }}
+            transition={{ duration: 1.1, ease: 'easeInOut' }}
             className="absolute inset-0 h-full w-full object-cover object-left"
           />
         </AnimatePresence>

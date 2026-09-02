@@ -8,5 +8,18 @@ const METRICS = [
 ]
 
 export function Metrics() {
-  return <section className="bg-orange"><div className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-20"><div className="grid grid-cols-2 gap-y-10 md:grid-cols-4">{METRICS.map((m, i) => <Reveal key={m.label} delay={i * 0.08} className={`px-4 text-center md:px-8 ${i > 0 ? 'md:border-l md:border-cream/30' : ''} ${i % 2 === 1 ? 'border-l border-cream/30 md:border-l' : ''}`}><p className="min-h-14 font-display text-5xl font-extrabold leading-none text-yellow sm:text-6xl md:text-7xl">{m.value}</p><p className="mt-3 whitespace-pre-line text-sm font-medium leading-tight text-cream/95 md:text-base">{m.label}</p></Reveal>)}</div></div></section>
+  return (
+    <section className="bg-orange">
+      <div className="mx-auto max-w-7xl px-5 py-10 md:px-8 md:py-14">
+        <div className="flex flex-wrap justify-center gap-x-10 gap-y-8 text-center sm:gap-x-14">
+          {METRICS.map((m, i) => (
+            <Reveal key={m.label} delay={i * 0.08} className={`flex flex-col items-center ${i > 0 ? 'border-l border-yellow/50 pl-10 sm:pl-14' : ''}`}>
+              {m.value && <p className="font-display text-5xl font-extrabold leading-none text-yellow sm:text-6xl md:text-7xl">{m.value}</p>}
+              <p className={`max-w-[11rem] whitespace-pre-line text-sm font-medium leading-tight text-cream/95 md:text-base ${m.value ? 'mt-3' : ''}`}>{m.label}</p>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
 }

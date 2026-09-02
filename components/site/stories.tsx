@@ -15,8 +15,8 @@ const SLIDES = [
     ],
   },
   {
-    image: '/images/historia-sala.png',
-    alt: 'Pessoas reunidas em uma sala para conversar',
+    image: '/images/historia-organizando.png',
+    alt: 'Três jovens de costas, abraçados, observando uma comunidade do alto',
     badge: 'Organizando os sonhos',
     paragraphs: [
       'Reuniremos pessoas de diferentes trajetórias para o diálogo e ação conjunta, em uma série de quatro encontros.',

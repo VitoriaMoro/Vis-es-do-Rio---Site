@@ -1,6 +1,6 @@
 import { Reveal } from './reveal'
 
-const VIDEO_SRC = ''
+const VIDEO_SRC = '/videos/visoes-do-rio.mp4'
 
 export function VideoBlock() {
   return (
@@ -23,8 +23,8 @@ export function VideoBlock() {
         </Reveal>
 
         <div>
-          <Reveal><h2 className="font-display text-4xl font-extrabold leading-[1.05] text-teal sm:text-5xl md:text-6xl">Vídeo sobre<br />o projeto</h2></Reveal>
-          <Reveal delay={0.08}><p className="mt-6 max-w-md text-base leading-relaxed text-ink/80 md:text-lg">Conheça como o Visões do Rio conecta pessoas, territórios e ideias para multiplicar impactos por todo o estado. Uma rede viva construída a muitas mãos, que dá voz a quem transforma o Rio todos os dias.</p></Reveal>
+          <Reveal><h2 className="font-display text-4xl font-extrabold leading-[1.05] text-teal sm:text-5xl md:text-6xl">Diferentes olhares,<br />outros caminhos,<br />melhores futuros</h2></Reveal>
+          <Reveal delay={0.08}><p className="mt-6 max-w-md text-base leading-relaxed text-ink/80 md:text-lg">Assista ao vídeo, inspire-se e vem com a gente</p></Reveal>
         </div>
       </div>
     </section>

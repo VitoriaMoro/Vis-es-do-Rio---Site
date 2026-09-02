@@ -9,7 +9,7 @@ export function VideoBlock() {
         <Reveal>
           <div className="overflow-hidden rounded-sm bg-ink ring-1 ring-ink/10 shadow-xl shadow-ink/15">
             {VIDEO_SRC ? (
-              <video className="aspect-video w-full object-cover" controls preload="metadata" poster="/images/historia-mural.png">
+              <video className="aspect-video w-full object-cover" controls preload="metadata" poster="/images/video-poster.jpg">
                 <source src={VIDEO_SRC} type="video/mp4" />
                 Seu navegador não suporta a reprodução de vídeo.
               </video>

@@ -26,7 +26,7 @@ export function NetworkMap() {
         </div>
         <Reveal delay={0.1} className="relative">
           <div className="relative flex w-full flex-col gap-3 sm:flex-row sm:items-center">
-            <div className="relative w-full sm:flex-[12]">
+            <div className="relative w-full sm:flex-[9]">
               <img src="/images/network-map.png" alt="Mapa das seis mesorregiões do estado do Rio de Janeiro" className="w-full select-none" />
               <svg viewBox="0 0 100 100" preserveAspectRatio="none" className="absolute inset-0 h-full w-full">
                 {REGIONS.map((region) => (
@@ -50,7 +50,7 @@ export function NetworkMap() {
               </svg>
             </div>
 
-            <div className="w-full shrink-0 self-start rounded-xl bg-white/95 p-2 shadow-lg shadow-ink/15 ring-1 ring-ink/5 sm:w-[76px]">
+            <div className="w-full shrink-0 self-start rounded-xl bg-white/95 p-2 shadow-lg shadow-ink/15 ring-1 ring-ink/5 sm:w-[104px]">
               <ul className="grid grid-cols-2 gap-1 sm:block sm:space-y-1">
                 {REGIONS.map((region) => (
                   <li key={region.key}>
@@ -58,10 +58,10 @@ export function NetworkMap() {
                       type="button"
                       onMouseEnter={() => setSelected(region.key)}
                       onClick={() => setSelected(region.key)}
-                      className={`flex w-full items-center gap-1 rounded-md px-1 py-0.5 text-left text-[8px] font-semibold leading-tight transition-colors ${selected === region.key ? 'bg-ink/5 text-ink' : 'text-ink/70 hover:bg-ink/5'}`}
+                      className={`flex w-full items-center gap-1.5 rounded-md px-1 py-0.5 text-left text-[9px] font-semibold leading-snug transition-colors ${selected === region.key ? 'bg-ink/5 text-ink' : 'text-ink/70 hover:bg-ink/5'}`}
                     >
                       <span className="h-1.5 w-1.5 shrink-0 rounded-full" style={{ backgroundColor: region.color }} />
-                      <span className="min-w-0 break-words">{region.name}</span>
+                      <span className="min-w-0">{region.name}</span>
                     </button>
                   </li>
                 ))}
